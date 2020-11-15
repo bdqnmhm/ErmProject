@@ -1,6 +1,7 @@
 ﻿using ERM.Core.DataBase;
 using ERM.Manager;
 using ErmMvc.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -27,6 +28,9 @@ namespace ErmMvc.Controllers
             if (user.Count > 0)
             {
                 TempData["users"] = user;
+                //写入cookies方式1
+                Response.Cookies["tempToken"].Value = user.FirstOrDefault().ID.ToString();
+                Response.Cookies["tempToken"].Expires = DateTime.Now.AddHours(24);
                 return RedirectToAction("Index", "Erm");
             }
             else
@@ -50,10 +54,15 @@ namespace ErmMvc.Controllers
             return View();
         }
 
-        public ActionResult ErmInfo(string startdate, string enddate, string username, string pageNumber)
+        public ActionResult ErmInfo(string startdate, string enddate, string username, string pageNumber, string fw, string eid, string phone)
         {
+            if (Request.Cookies["tempToken"].Value == null)
+            {
+                return RedirectToAction("Login", "Erm");
+            }
+
             GridResult result = new GridResult();
-            DataSet ds = GetErmInfoList(startdate, enddate, username, 10, int.Parse(string.IsNullOrEmpty(pageNumber) ? "1" : pageNumber));
+            DataSet ds = GetErmInfoList(startdate, enddate, username, 10, int.Parse(string.IsNullOrEmpty(pageNumber) ? "1" : pageNumber), fw, eid, phone);
             if (ds != null)
             {
                 result.data = ConvertToList<ErmInfoModel>(ds.Tables[0]);
@@ -77,13 +86,22 @@ namespace ErmMvc.Controllers
             return View();
         }
 
-        public ActionResult ErmSubmit(string ID, string COMPTITLE, string CORPORATION, string MOBILEPHONE, string EID = "1")
+        public ActionResult ErmSubmit(string ID, string COMPTITLE, string CORPORATION, string MOBILEPHONE)
         {
+            string EID = string.Empty;
+            if (Request.Cookies["tempToken"].Value == null)
+            {
+                return RedirectToAction("Login", "Erm");
+            }
+            else
+            {
+                EID = Request.Cookies["tempToken"].Value;
+            }
             var lstdata = GetExistsErmInfo(COMPTITLE);
             if (lstdata.Count > 0)
             {
                 var m = lstdata.FirstOrDefault();
-                return Json(new { success = false,msg=string.Format("公司抬头【{0}】已经在【{1}】被【{2}】录入过，到期日期【{3}】",m.COMPTITLE,m.EDT.Value.ToString("yyyy-MM-dd HH:mm:ss"),m.USERNAME,m.ENDDATE.Value.ToString("yyyy-MM-dd HH:mm:ss")) });
+                return Json(new { success = false, msg = string.Format("公司抬头【{0}】已经在【{1}】被【{2}】录入过，到期日期【{3}】", m.COMPTITLE, m.EDT.Value.ToString("yyyy-MM-dd HH:mm:ss"), m.USERNAME, m.ENDDATE.Value.ToString("yyyy-MM-dd HH:mm:ss")) });
             }
             string sql = string.Empty;
             if (string.IsNullOrEmpty(ID))
@@ -263,7 +281,7 @@ namespace ErmMvc.Controllers
             return ds;
         }
 
-        public DataSet GetErmInfoList(string startedate, string enddate, string UserName, int PageSize, int PageIndex)
+        public DataSet GetErmInfoList(string startedate, string enddate, string UserName, int PageSize, int PageIndex, string fw, string eid, string phone)
         {
             Database db = DataBaseManager.GetDataBaseByDomainConfig(AppDomain.CurrentDomain.BaseDirectory, "Public");
             string str = string.Empty;
@@ -276,12 +294,27 @@ namespace ErmMvc.Controllers
 
             if (!string.IsNullOrEmpty(enddate))
             {
-                where += string.Format(" and erm_info.edt<='{0}' ", startedate);
+                where += string.Format(" and erm_info.edt<='{0}' ", enddate);
             }
 
             if (!string.IsNullOrEmpty(UserName))
             {
                 where += string.Format(" and erm_info.comptitle like '%{0}%' ", UserName);
+            }
+
+            if (!string.IsNullOrEmpty(fw))
+            {
+                where += string.Format(" and erm_info.corporation like '%{0}%' ", fw);
+            }
+
+            if (!string.IsNullOrEmpty(eid))
+            {
+                where += string.Format(" and erm_users.username like '%{0}%' ", eid);
+            }
+
+            if (!string.IsNullOrEmpty(phone))
+            {
+                where += string.Format(" and erm_info.mobilephone like '%{0}%' ", phone);
             }
 
             str = string.Format(@" select erm_info.*,username from erm_info left join erm_users on erm_info.eid=erm_users.id where 1=1 {0}", where);
