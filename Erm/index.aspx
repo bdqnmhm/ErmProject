@@ -12,7 +12,6 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="format-detection" content="telephone=no">
-  <!--<script type="text/javascript" src="/static/xiyuan/lib/loading/okLoading.js"></script>-->
   <link rel="stylesheet" href="./css/x-admin.css" media="all">
 </head>
 <style>
@@ -30,13 +29,7 @@
           <i class=" layui-icon iconfont" aria-hidden="true">&#xe83c;</i>
         </div>
       </div>
-    <%--  <ul class="layui-nav layui-layout-left layui-ygyd-menu" style="position:absolute; left:250px;">
-        <li class="layui-nav-item daohang" ids="#table1"><a href="javascript:;">基础设置</a></li>
-        <li class="layui-nav-item daohang" ids="#table2"><a href="javascript:;">系统设置</a></li>
-
-      </ul>--%>
-
-      <ul class="layui-nav" lay-filter="">
+        <ul class="layui-nav" lay-filter="">
         <li class="layui-nav-item" id="time" style="margin-right: 50px;font-size: 20px;color: #2fb9d4;font-family: 'yjsz'"></li>
         <li class="layui-nav-item">
           <a href="" title="系统公告">
@@ -62,70 +55,7 @@
     </div>
   </div>
 
- <%-- <!--左侧导航区域-->
-  <div class="layui-side layui-bg-black x-side show_list" style="left:0px;" id="table1">
-    <div style="height: 130px; width: 220px; ">
-      <a class="img" title="我的头像" style="display: block;width: 80px;height: 80px;margin: 10px auto 10px;">
-        <img src="./images/logo.png" class="userAvatar" style="display: block;width: 100%;height: 100%;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;border: 4px solid #44576b;box-sizing: border-box;">
-      </a>
-      <p style=" display: block;width: 100%;height: 25px;color: #ffffff;text-align: center;font-size: 12px;white-space: nowrap;line-height: 25px;overflow: hidden;">
-        你好！<span class="userName">admin</span>, 欢迎回来
-      </p>
-    </div>
-    <div class="layui-side-scroll">
-      <ul class="layui-nav layui-nav-tree site-demo-nav" lay-filter="side">
-        <li class="layui-nav-item"> <a class="javascript:;" href="javascript:;"> <i class="layui-icon iconfont" style="top: 3px;">&#xe65c;</i><cite>栏目管理</cite> </a>
-          <dl class="layui-nav-child">
-            <dd class="">
-            <dd class=""> <a href="javascript:;" _href="./cate-list.html"> <cite>栏目列表</cite> </a> </dd>
-            </dd>
-          </dl>
-        </li>
-        <li class="layui-nav-item"> <a class="javascript:;" href="javascript:;"> <i class="layui-icon iconfont" style="top: 3px;">&#xe661;</i><cite>文章管理</cite> </a>
-          <dl class="layui-nav-child">
-            <dd class="">
-            <dd class=""> <a href="javascript:;" _href="./articletype-list.html"> <cite>文章类型列表</cite> </a> </dd>
-            <dd class=""> <a href="javascript:;" _href="./article-list.html"> <cite>文章列表</cite> </a> </dd>
-            </dd>
-          </dl>
-        </li>
-        <li class="layui-nav-item"> <a class="javascript:;" href="javascript:;"> <i class="layui-icon iconfont" style="top: 3px;">&#xe60b;</i><cite>公告管理</cite> </a>
-          <dl class="layui-nav-child">
-            <dd class="">
-            <dd class=""> <a href="javascript:;" _href="./noticetype-list.html"> <cite>公告类型</cite> </a> </dd>
-            </dd>
-            <dd class="">
-            <dd class=""> <a href="javascript:;" _href="./notice-list.html"> <cite>公告列表</cite> </a> </dd>
-            </dd>
-
-          </dl>
-        </li>
-        <li class="layui-nav-item"> <a class="javascript:;" href="javascript:;"> <i class="layui-icon " style="top: 3px;">&#xe634;</i><cite>轮播管理</cite> </a>
-          <dl class="layui-nav-child">
-            <dd class="">
-            <dd class=""> <a href="javascript:;" _href="./banner-list.html"> <cite>轮播列表</cite> </a> </dd>
-            </dd>
-          </dl>
-        </li>
-
-        <li class="layui-nav-item"> <a class="javascript:;" href="javascript:;"> <i class="layui-icon iconfont" style="top: 3px;">&#xe621;</i><cite>分类管理</cite> </a>
-          <dl class="layui-nav-child">
-            <dd class=""> <a href="javascript:;" _href="./category.html"> <cite>分类列表</cite> </a> </dd>
-          </dl>
-        </li>
-        <li class="layui-nav-item"> <a class="javascript:;" href="javascript:;"> <i class="layui-icon iconfont" style="top: 3px;">&#xe60f;</i><cite>评论管理</cite> </a>
-          <dl class="layui-nav-child">
-            <dd class=""> <a href="javascript:;" _href="./comment-list.html"> <cite>评论列表</cite> </a> </dd>
-            <dd class=""> <a href="javascript:;" _href="./feedback-list.html"> <cite>意见反馈</cite> </a> </dd>
-          </dl>
-        </li>
-
-        <li class="layui-nav-item" style="height: 30px; text-align: center"> </li>
-      </ul>
-    </div>
-  </div--%>>
-
-  <div class="layui-side layui-bg-black x-side show_list " style="left:0px;" id="table1">
+  <%--<div class="layui-side layui-bg-black x-side show_list " style="left:0px;" id="table1">
     <div style="height: 130px; width: 220px; " class="head-img">
       <a class="img" title="我的头像" style="display: block;width: 80px;height: 80px;margin: 10px auto 10px;">
         <img src="./images/logo.png" class="userAvatar" style="display: block;width: 100%;height: 100%;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;border: 4px solid #44576b;box-sizing: border-box;">
@@ -136,51 +66,21 @@
     </div>
     <div class="layui-side-scroll">
       <ul class="layui-nav layui-nav-tree site-demo-nav" lay-filter="side">
-
-
-  <%--      <li class="layui-nav-item"> <a class="javascript:;" href="javascript:;"> <i class="layui-icon iconfont" style="top: 3px;">&#xe625;</i><cite>会员管理</cite> </a>
-          <dl class="layui-nav-child">
-            <dd class=""> <a href="javascript:;" _href="member-list.html"> <cite>会员列表</cite> </a> </dd>
-            <dd class=""> <a href="javascript:;" _href="./member-del.html"> <cite>删除会员</cite> </a> </dd>
-            <dd class=""> <a href="javascript:;" _href="./member-level.html"> <cite>等级管理</cite> </a> </dd>
-            <dd class=""> <a href="javascript:;" _href="./member-kiss.html"> <cite>积分管理</cite> </a> </dd>
-            <dd class=""> <a href="javascript:;" _href="./member-view.html"> <cite>浏览记录</cite> </a> </dd>
-            <dd class=""> <a href="javascript:;" _href="./member-view.html"> <cite>分享记录</cite> </a> </dd>
-          </dl>
-        </li>--%>
         <li class="layui-nav-item"> <a class="javascript:;" href="javascript:;"> <i class="layui-icon" style="top: 3px;">&#xe613;</i><cite>管理员管理</cite> </a>
           <dl class="layui-nav-child">
             <dd class=""> <a href="javascript:;" _href="ermuser.aspx"> <cite>用户管理</cite> </a> </dd>
             <dd class=""> <a href="javascript:;" _href="erminfo.aspx"> <cite>档案管理</cite> </a> </dd>            
           </dl>
         </li>
-        <%--<li class="layui-nav-item"> <a class="javascript:;" href="javascript:;"> <i class="layui-icon" style="top: 3px;">&#xe629;</i><cite>系统统计</cite> </a>
-          <dl class="layui-nav-child">
-            <dd class=""> <a href="javascript:;" _href="./echart.html"> <cite>统计报表</cite> </a> </dd>
-          </dl>
-        </li>
-        <li class="layui-nav-item"> <a class="javascript:;" href="javascript:;"> <i class="layui-icon" style="top: 3px;">&#xe614;</i><cite>系统设置</cite> </a>
-          <dl class="layui-nav-child">
-            <dd class=""> <a href="javascript:;" _href="./sys-set.html"> <cite>系统设置</cite> </a> </dd>
-            <dd class=""> <a href="javascript:;" _href="./sys-data.html"> <cite>数字字典</cite> </a> </dd>
-            <dd class=""> <a href="javascript:;" _href="./sys-shield.html"> <cite>屏蔽词</cite> </a> </dd>
-            <dd class=""> <a href="javascript:;" _href="./sys-log.html"> <cite>系统日志</cite> </a> </dd>
-            <dd class=""> <a href="javascript:;" _href="./sys-link.html"> <cite>友情链接</cite> </a> </dd>
-            <dd class=""> <a href="javascript:;" _href="./sys-qq.html"> <cite>第三方登录</cite> </a> </dd>
-          </dl>
-        </li>--%>
-        <li class="layui-nav-item" style="height: 30px; text-align: center"> </li>
+     <%--   <li class="layui-nav-item" style="height: 30px; text-align: center"> </li>--%>
       </ul>
     </div>
-  </div>
-
-
-
+  </div>--%>
 
 
   <div class="layui-tab layui-tab-card site-demo-title x-main" lay-filter="x-tab" lay-allowclose="true" style="left: 220px;border-left: solid 2px #2299ee;">
     <ul class="layui-tab-title">
-      <li class="layui-this"> 我的桌面 <i class="layui-icon layui-unselect layui-tab-close">ဆ</i> </li>
+      <li class="layui-this"> 档案管理 <i class="layui-icon layui-unselect layui-tab-close">ဆ</i> </li>
     </ul>
     <div class="layui-tab-content site-demo site-demo-body">
       <div class="layui-tab-item layui-show">
@@ -189,7 +89,6 @@
     </div>
   </div>
   <div class="site-mobile-shade"> </div>
-
 </div>
 
 <script src="./lib/layui/layui.js" charset="utf-8"></script>
@@ -198,14 +97,14 @@
 <script src="./js/x-layui.js" charset="utf-8"></script>
 
 <script>
-    $(".daohang").click(function () {
-        var table = $(this).attr("ids");
-        var ids = $(".show_list").attr("id");
-        $("#" + ids + "").addClass("hide_lits");
-        $("#" + ids + "").removeClass("show_list");
-        $("" + table + "").removeClass("hide_lits");
-        $("" + table + "").addClass("show_list");
-    })
+    //$(".daohang").click(function () {
+    //    var table = $(this).attr("ids");
+    //    var ids = $(".show_list").attr("id");
+    //    $("#" + ids + "").addClass("hide_lits");
+    //    $("#" + ids + "").removeClass("show_list");
+    //    $("" + table + "").removeClass("hide_lits");
+    //    $("" + table + "").addClass("show_list");
+    //})
 
 
 </script>

@@ -1,0 +1,716 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>F:\IIsDir</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>09/10/2013 16:29:20</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>09/10/2013 16:29:20</publishTime>
+    </File>
+    <File Include="bin/ERM.Core.CommonUtils.dll">
+      <publishTime>11/15/2020 09:27:04</publishTime>
+    </File>
+    <File Include="bin/ERM.Core.DataBase.dll">
+      <publishTime>11/15/2020 09:27:04</publishTime>
+    </File>
+    <File Include="bin/ERM.Manager.dll">
+      <publishTime>11/15/2020 09:27:04</publishTime>
+    </File>
+    <File Include="bin/ErmMvc.dll">
+      <publishTime>11/15/2020 20:52:55</publishTime>
+    </File>
+    <File Include="bin/ErmMvc.pdb">
+      <publishTime>11/15/2020 20:52:55</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>09/05/2018 16:10:50</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>07/25/2012 11:48:56</publishTime>
+    </File>
+    <File Include="bin/Mono.Security.dll">
+      <publishTime>11/15/2020 09:27:04</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>04/22/2019 01:06:16</publishTime>
+    </File>
+    <File Include="bin/Npgsql.dll">
+      <publishTime>11/15/2020 09:27:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>11/28/2018 12:59:46</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>02/11/2014 15:26:04</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>11/28/2018 13:00:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>01/23/2014 13:57:34</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Helpers.resources.dll">
+      <publishTime>11/29/2018 13:29:50</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Mvc.resources.dll">
+      <publishTime>11/29/2018 13:25:14</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Optimization.resources.dll">
+      <publishTime>02/11/2014 15:28:40</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Razor.resources.dll">
+      <publishTime>11/29/2018 13:25:38</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.Deployment.resources.dll">
+      <publishTime>11/29/2018 13:29:50</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.Razor.resources.dll">
+      <publishTime>11/29/2018 13:29:50</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.resources.dll">
+      <publishTime>11/29/2018 13:29:50</publishTime>
+    </File>
+    <File Include="Configuration/DataBase.config">
+      <publishTime>11/15/2020 09:27:02</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css">
+      <publishTime>11/15/2020 08:25:34</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css.map">
+      <publishTime>11/15/2020 08:25:34</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css">
+      <publishTime>11/15/2020 08:25:34</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css.map">
+      <publishTime>11/15/2020 08:25:34</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>11/15/2020 08:25:34</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css.map">
+      <publishTime>11/15/2020 08:25:34</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>11/15/2020 08:25:33</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css.map">
+      <publishTime>11/15/2020 08:25:33</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>11/15/2020 08:25:31</publishTime>
+    </File>
+    <File Include="css/bootstrap.css">
+      <publishTime>11/15/2020 09:27:02</publishTime>
+    </File>
+    <File Include="css/font-awesome.css">
+      <publishTime>11/15/2020 09:27:02</publishTime>
+    </File>
+    <File Include="css/font-awesome.min.css">
+      <publishTime>11/15/2020 09:27:02</publishTime>
+    </File>
+    <File Include="css/fonts/fontawesome-webfont.eot">
+      <publishTime>11/15/2020 09:27:02</publishTime>
+    </File>
+    <File Include="css/fonts/fontawesome-webfont.svg">
+      <publishTime>11/15/2020 09:27:02</publishTime>
+    </File>
+    <File Include="css/fonts/fontawesome-webfont.ttf">
+      <publishTime>11/15/2020 09:27:02</publishTime>
+    </File>
+    <File Include="css/fonts/fontawesome-webfont.woff">
+      <publishTime>11/15/2020 09:27:02</publishTime>
+    </File>
+    <File Include="css/fonts/fontawesome-webfont.woff2">
+      <publishTime>11/15/2020 09:27:02</publishTime>
+    </File>
+    <File Include="css/fonts/FontAwesome.otf">
+      <publishTime>11/15/2020 09:27:02</publishTime>
+    </File>
+    <File Include="css/login.css">
+      <publishTime>11/15/2020 09:27:02</publishTime>
+    </File>
+    <File Include="css/x-admin.css">
+      <publishTime>11/15/2020 09:27:02</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>11/15/2020 08:25:31</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>11/15/2020 09:27:02</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>11/15/2020 09:27:02</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>11/15/2020 09:27:02</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>11/15/2020 09:27:02</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>11/15/2020 09:27:02</publishTime>
+    </File>
+    <File Include="fonts/yjsz.ttf">
+      <publishTime>11/15/2020 09:27:02</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>11/15/2020 08:25:31</publishTime>
+    </File>
+    <File Include="images/bg.jpg">
+      <publishTime>11/15/2020 09:27:02</publishTime>
+    </File>
+    <File Include="images/icon.png">
+      <publishTime>11/15/2020 09:27:02</publishTime>
+    </File>
+    <File Include="images/logbg.jpg">
+      <publishTime>11/15/2020 09:27:02</publishTime>
+    </File>
+    <File Include="images/logo.png">
+      <publishTime>11/15/2020 09:27:02</publishTime>
+    </File>
+    <File Include="images/logo.psd">
+      <publishTime>11/15/2020 09:27:02</publishTime>
+    </File>
+    <File Include="js/echarts.min.js">
+      <publishTime>11/15/2020 09:27:02</publishTime>
+    </File>
+    <File Include="js/jquery.js">
+      <publishTime>11/15/2020 09:27:02</publishTime>
+    </File>
+    <File Include="js/jquery.min.js">
+      <publishTime>11/15/2020 09:27:02</publishTime>
+    </File>
+    <File Include="js/jquery_002.js">
+      <publishTime>11/15/2020 09:27:02</publishTime>
+    </File>
+    <File Include="js/x-admin.js">
+      <publishTime>11/15/2020 09:27:02</publishTime>
+    </File>
+    <File Include="js/x-layui.js">
+      <publishTime>11/15/2020 09:27:02</publishTime>
+    </File>
+    <File Include="layer/layer.js">
+      <publishTime>11/15/2020 09:27:02</publishTime>
+    </File>
+    <File Include="layer/mobile/layer.js">
+      <publishTime>11/15/2020 09:27:02</publishTime>
+    </File>
+    <File Include="layer/mobile/need/layer.css">
+      <publishTime>11/15/2020 09:27:02</publishTime>
+    </File>
+    <File Include="layer/theme/default/icon-ext.png">
+      <publishTime>11/15/2020 09:27:02</publishTime>
+    </File>
+    <File Include="layer/theme/default/icon.png">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="layer/theme/default/layer.css">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="layer/theme/default/loading-0.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="layer/theme/default/loading-1.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="layer/theme/default/loading-2.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/bootstrap/css/bootstrap-theme.css">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/bootstrap/css/bootstrap-theme.css.map">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/bootstrap/css/bootstrap-theme.min.css">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/bootstrap/css/bootstrap.css">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/bootstrap/css/bootstrap.css.map">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/bootstrap/css/bootstrap.min.css">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/bootstrap/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/bootstrap/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/bootstrap/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/bootstrap/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/bootstrap/js/bootstrap.js">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/bootstrap/js/bootstrap.min.js">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/bootstrap/js/npm.js">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/css/layui.css">
+      <publishTime>11/15/2020 17:03:36</publishTime>
+    </File>
+    <File Include="lib/layui/css/modules/code.css">
+      <publishTime>11/15/2020 17:21:50</publishTime>
+    </File>
+    <File Include="lib/layui/css/modules/laydate/default/laydate.css">
+      <publishTime>11/15/2020 17:21:50</publishTime>
+    </File>
+    <File Include="lib/layui/css/modules/laydate/icon.png">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/css/modules/laydate/laydate.css">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/css/modules/layer/default/icon-ext.png">
+      <publishTime>11/15/2020 17:21:50</publishTime>
+    </File>
+    <File Include="lib/layui/css/modules/layer/default/icon.png">
+      <publishTime>11/15/2020 17:21:50</publishTime>
+    </File>
+    <File Include="lib/layui/css/modules/layer/default/layer.css">
+      <publishTime>11/15/2020 17:21:50</publishTime>
+    </File>
+    <File Include="lib/layui/css/modules/layer/default/loading-0.gif">
+      <publishTime>11/15/2020 17:21:50</publishTime>
+    </File>
+    <File Include="lib/layui/css/modules/layer/default/loading-1.gif">
+      <publishTime>11/15/2020 17:21:50</publishTime>
+    </File>
+    <File Include="lib/layui/css/modules/layer/default/loading-2.gif">
+      <publishTime>11/15/2020 17:21:50</publishTime>
+    </File>
+    <File Include="lib/layui/font/iconfont.eot">
+      <publishTime>11/15/2020 17:08:03</publishTime>
+    </File>
+    <File Include="lib/layui/font/iconfont.svg">
+      <publishTime>11/15/2020 17:08:03</publishTime>
+    </File>
+    <File Include="lib/layui/font/iconfont.ttf">
+      <publishTime>11/15/2020 17:08:03</publishTime>
+    </File>
+    <File Include="lib/layui/font/iconfont.woff">
+      <publishTime>11/15/2020 17:08:03</publishTime>
+    </File>
+    <File Include="lib/layui/font/iconfont.woff2">
+      <publishTime>11/15/2020 17:08:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/0.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/1.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/10.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/11.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/12.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/13.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/14.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/15.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/16.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/17.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/18.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/19.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/2.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/20.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/21.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/22.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/23.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/24.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/25.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/26.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/27.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/28.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/29.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/3.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/30.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/31.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/32.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/33.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/34.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/35.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/36.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/37.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/38.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/39.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/4.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/40.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/41.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/42.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/43.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/44.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/45.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/46.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/47.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/48.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/49.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/5.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/50.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/51.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/52.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/53.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/54.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/55.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/56.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/57.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/58.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/59.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/6.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/60.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/61.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/62.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/63.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/64.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/65.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/66.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/67.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/68.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/69.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/7.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/70.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/71.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/8.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/images/face/9.gif">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/lay/dest/layui.all.js">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/lay/lib/jquery.js">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/lay/modules/code.js">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/lay/modules/element.js">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/lay/modules/flow.js">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/lay/modules/form.js">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/lay/modules/laydate.js">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/lay/modules/layedit.js">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/lay/modules/layer.js">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/lay/modules/laypage.js">
+      <publishTime>11/15/2020 17:00:07</publishTime>
+    </File>
+    <File Include="lib/layui/lay/modules/laytpl.js">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/lay/modules/tree.js">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/lay/modules/upload.js">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/lay/modules/util.js">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/layui/layui.js">
+      <publishTime>11/15/2020 09:27:03</publishTime>
+    </File>
+    <File Include="lib/loading/okLoading.css">
+      <publishTime>11/15/2020 20:08:21</publishTime>
+    </File>
+    <File Include="libs/ERM.Core.CommonUtils.dll">
+      <publishTime>11/15/2020 09:27:04</publishTime>
+    </File>
+    <File Include="libs/ERM.Core.DataBase.dll">
+      <publishTime>11/15/2020 09:27:04</publishTime>
+    </File>
+    <File Include="libs/ERM.Manager.dll">
+      <publishTime>11/15/2020 09:27:04</publishTime>
+    </File>
+    <File Include="libs/ERM.Project.Infrastructure.dll">
+      <publishTime>11/15/2020 09:42:29</publishTime>
+    </File>
+    <File Include="libs/Mono.Security.dll">
+      <publishTime>11/15/2020 09:27:04</publishTime>
+    </File>
+    <File Include="libs/Npgsql.dll">
+      <publishTime>11/15/2020 09:27:04</publishTime>
+    </File>
+    <File Include="Views/Erm/ErmAdd.cshtml">
+      <publishTime>11/15/2020 20:47:29</publishTime>
+    </File>
+    <File Include="Views/Erm/ErmInfo.cshtml">
+      <publishTime>11/15/2020 20:26:30</publishTime>
+    </File>
+    <File Include="Views/Erm/ErmUsers.cshtml">
+      <publishTime>11/15/2020 09:17:30</publishTime>
+    </File>
+    <File Include="Views/Erm/Index.cshtml">
+      <publishTime>11/15/2020 17:42:20</publishTime>
+    </File>
+    <File Include="Views/Erm/Login.cshtml">
+      <publishTime>11/15/2020 18:53:15</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>11/15/2020 08:25:31</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>11/15/2020 08:25:31</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>11/15/2020 08:25:31</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>11/15/2020 08:25:31</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>11/15/2020 20:52:55</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

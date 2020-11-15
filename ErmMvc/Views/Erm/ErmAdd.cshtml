@@ -1,0 +1,176 @@
+﻿@model ErmMvc.Models.ErmInfoModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        后台管理系统
+    </title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../css/x-admin.css" media="all">
+</head>
+
+<body>
+    <div class="x-body">
+        <form class="layui-form">
+            <div class="layui-form-item">
+                <label for="username" class="layui-form-label">
+                    <span class="x-red">*</span>公司抬头
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="COMPTITLE" name="COMPTITLE" required="" lay-verify="required"
+                           autocomplete="off" class="layui-input" value="@string.Format("{0}",Model==null?"":Model.COMPTITLE)">
+                </div>
+                <div class="layui-form-mid layui-word-aux">
+                    <span class="x-red">*</span>公司抬头不能空
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="phone" class="layui-form-label">
+                    <span class="x-red">*</span>公司法人
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="CORPORATION" name="CORPORATION" required="" lay-verify="required"
+                           autocomplete="off" class="layui-input" value="@string.Format("{0}",Model==null?"":Model.CORPORATION)">
+                </div>
+                <div class="layui-form-mid layui-word-aux">
+                    <span class="x-red">*</span>公司法人不能为空
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="L_email" class="layui-form-label">
+                    <span class="x-red">*</span>手机
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="MOBILEPHONE" name="MOBILEPHONE" required="" lay-verify="phone"
+                           autocomplete="off" class="layui-input" value="@string.Format("{0}",Model==null?"":Model.MOBILEPHONE)">
+                </div>
+                <div class="layui-form-mid layui-word-aux">
+                    <span class="x-red">*</span>手机不能为空
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="L_pass" class="layui-form-label">
+                    <span class="x-red">*</span>保护时间
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="EDT" name="EDT" required="" lay-verify="required"
+                           autocomplete="off" class="layui-input" value="@string.Format("{0}",Model==null?DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"):Model.EDT.Value.ToString("yyyy-MM-dd HH:mm:ss"))">
+                </div>
+                <div class="layui-form-mid layui-word-aux">
+                    创建时间
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label for="L_repass" class="layui-form-label" style="width:600px;">
+                </label>
+                <button class="layui-btn" lay-filter="add" lay-submit="">
+                    保存
+                </button>
+            </div>
+        </form>
+    </div>
+    <script src="../lib/layui/layui.js" charset="utf-8">
+    </script>
+    <script src="../js/x-layui.js" charset="utf-8">
+    </script>
+    <script>
+        layui.use(['form', 'layer'], function () {
+            $ = layui.jquery;
+            var form = layui.form()
+                , layer = layui.layer;
+
+            //自定义验证规则
+            form.verify({
+                nikename: function (value) {
+                    if (value.length < 5) {
+                        return '昵称至少得5个字符啊';
+                    }
+                }
+                , pass: [/(.+){6,12}$/, '密码必须6到12位']
+                , repass: function (value) {
+                    if ($('#L_pass').val() != $('#L_repass').val()) {
+                        return '两次密码不一致';
+                    }
+                }
+            });
+
+            //监听提交
+            form.on('submit(add)', function (data) {
+                console.log(data);
+                //发异步，把数据提交给php
+
+                $.post({
+                    //请求方式
+                    type: "POST",
+                    //请求的媒体类型
+                    contentType: "application/json",
+                    //请求地址
+                    url: "/Erm/ErmSubmit",
+                    //数据，json字符串
+                    data: JSON.stringify(data.field),
+                    //请求成功
+                    success: function (result) {
+                        var response = {};
+                        if (typeof (result) == "string") {
+                            response = JSON.parse(result);
+                        } else {
+                            response = result;
+                        }
+                        if (response.success == false) {
+                            parent.layer.alert(response.msg);
+                            return false;
+                        } else {
+
+                            var index = parent.layer.getFrameIndex(window.name);
+
+                            //关闭当前frame
+                            parent.layer.close(index);
+                            parent.location.href = "/Erm/ErmInfo";
+                        }
+
+                        //var response = {};
+                        //if (typeof (result) == "string") {
+                        //    response = JSON.parse(result);
+                        //} else {
+                        //    response = result;
+                        //}
+                        //if (!response.success) {
+                        //    $('#div2_loginerr').show();
+                        //    var msg = GetMsg(response.message, response.parameter);
+                        //    $('#div2_loginerr').html('<b></b>' + msg);
+                        //} else {
+                        //    $('#div2_loginerr').hide();
+                        //    window.location.href = response.data;
+                        //}
+                        //$("#btnlogin").removeAttr("disabled");
+                        //console.log(result);
+                    },
+                    //请求失败，包含具体的错误信息
+                    error: function (e) {
+                        console.log(e.status);
+                        console.log(e.responseText);
+                    }
+                });
+                //发异步，把数据提交给php
+
+            });
+
+
+        });
+    </script>
+
+</body>
+
+</html>

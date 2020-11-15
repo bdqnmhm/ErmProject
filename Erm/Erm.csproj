@@ -119,6 +119,7 @@
     <Content Include="libs\ERM.Core.CommonUtils.dll" />
     <Content Include="libs\ERM.Core.DataBase.dll" />
     <Content Include="libs\ERM.Manager.dll" />
+    <Content Include="libs\ERM.Project.Infrastructure.dll" />
     <Content Include="libs\Mono.Security.dll" />
     <Content Include="libs\Npgsql.dll" />
     <Content Include="lib\bootstrap\css\bootstrap-theme.css" />
