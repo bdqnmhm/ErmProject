@@ -341,6 +341,7 @@
     <Content Include="lib\layui\font\iconfont.woff2" />
     <None Include="packages.config" />
     <Content Include="Views\Erm\ErmAdd.cshtml" />
+    <Content Include="Views\Erm\UserAdd.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

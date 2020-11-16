@@ -86,6 +86,32 @@ namespace ErmMvc.Controllers
             return View();
         }
 
+        public ActionResult UserDel(string Id)
+        {
+            if (!string.IsNullOrEmpty(Id))
+            {
+                List<UserModel> lstdata = GeUserById(Id);
+                if (lstdata.Count > 0)
+                {
+                    RunSql(string.Format("delete from erm_users where id = '{0}'", Id));
+                }
+            }
+            return RedirectToAction("ErmUsers");
+        }
+
+        public ActionResult UserAdd(string Id)
+        {
+            if (!string.IsNullOrEmpty(Id))
+            {
+                List<UserModel> lstdata = GeUserById(Id);
+                if (lstdata.Count > 0)
+                {
+                    ViewData.Model = lstdata.FirstOrDefault();
+                }
+            }
+            return View();
+        }
+
         public ActionResult ErmSubmit(string ID, string COMPTITLE, string CORPORATION, string MOBILEPHONE)
         {
             string EID = string.Empty;
@@ -115,8 +141,52 @@ namespace ErmMvc.Controllers
             //return RedirectToAction("ErmInfo", "Erm");
         }
 
-        public ActionResult ErmUsers()
+
+        public ActionResult UserSubmit(string ID, string USERNAME, string LOGINNAME, string USERPWD)
         {
+            string EID = string.Empty;
+            if (Request.Cookies["tempToken"].Value == null)
+            {
+                return RedirectToAction("Login", "Erm");
+            }
+            else
+            {
+                EID = Request.Cookies["tempToken"].Value;
+            }
+            var lstdata = GeUserExistsByUserName(USERNAME);
+            if (lstdata.Count > 0)
+            {
+                var m = lstdata.FirstOrDefault();
+                return Json(new { success = false, msg = string.Format("用户名已经存在") });
+            }
+            string sql = string.Empty;
+            if (string.IsNullOrEmpty(ID))
+            {
+                sql = string.Format(@"INSERT INTO erm_users(id, loginname, username, userpwd, state, state_enum, edt) 
+VALUES (gen_id('1900-01-01'::date,'2020-10-16'::date)::bigint, '{0}', '{1}', '{2}', '1', '启用', now());",
+                                LOGINNAME, USERNAME, USERPWD);
+                RunSql(sql);
+            }
+            return Json(new { success = true });
+            //return RedirectToAction("ErmInfo", "Erm");
+        }
+
+        public ActionResult ErmUsers(string startdate, string enddate, string username, string pageNumber)
+        {
+            if (Request.Cookies["tempToken"].Value == null)
+            {
+                return RedirectToAction("Login", "Erm");
+            }
+
+            GridResult result = new GridResult();
+            DataSet ds = GetUserList(startdate, enddate, username, 10, int.Parse(string.IsNullOrEmpty(pageNumber) ? "1" : pageNumber));
+            if (ds != null)
+            {
+                result.data = ConvertToList<UserModel>(ds.Tables[0]);
+                result.page = int.Parse(string.IsNullOrEmpty(pageNumber) ? "1" : pageNumber);
+                result.total = int.Parse(ds.Tables[1].Rows[0][0].ToString());
+            }
+            ViewData.Model = result;
             return View();
         }
 
@@ -231,6 +301,20 @@ namespace ErmMvc.Controllers
         {
             string sql = string.Format(@" select erm_info.*,username from erm_info left join erm_users on erm_info.eid=erm_users.id where erm_info.Id ='{0}' ", Id);
             var lstusers = GetDataBySql<ErmInfoModel>(sql);
+            return lstusers;
+        }
+
+        public List<UserModel> GeUserById(string Id)
+        {
+            string sql = string.Format(@" select * from erm_users where id ='{0}' ", Id);
+            var lstusers = GetDataBySql<UserModel>(sql);
+            return lstusers;
+        }
+
+        public List<UserModel> GeUserExistsByUserName(string UserName)
+        {
+            string sql = string.Format(@" select * from erm_users where userName ='{0}' ", UserName);
+            var lstusers = GetDataBySql<UserModel>(sql);
             return lstusers;
         }
 
