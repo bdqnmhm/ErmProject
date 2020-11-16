@@ -1,4 +1,4 @@
-﻿@model ErmMvc.Models.ErmInfoModel
+﻿@model ErmMvc.Models.UserModel
 @{
     Layout = null;
 }
@@ -25,43 +25,43 @@
         <form class="layui-form">
             <div class="layui-form-item">
                 <label for="username" class="layui-form-label">
-                    <span class="x-red">*</span>公司抬头
+                    <span class="x-red">*</span>用户名
                 </label>
                 <div class="layui-input-inline">
-                    <input type="text" id="COMPTITLE" name="COMPTITLE" required="" lay-verify="required"
-                           autocomplete="off" class="layui-input" value="@string.Format("{0}",Model==null?"":Model.COMPTITLE)">
+                    <input type="text" id="USERNAME" name="USERNAME" required="" lay-verify="required"
+                           autocomplete="off" class="layui-input" value="@string.Format("{0}",Model==null?"":Model.USERNAME)">
                 </div>
                 <div class="layui-form-mid layui-word-aux">
-                    <span class="x-red">*</span>公司抬头不能空
+                    <span class="x-red">*</span>用户名不能空
                 </div>
             </div>
             <div class="layui-form-item">
                 <label for="phone" class="layui-form-label">
-                    <span class="x-red">*</span>公司法人
+                    <span class="x-red">*</span>登录名
                 </label>
                 <div class="layui-input-inline">
-                    <input type="text" id="CORPORATION" name="CORPORATION" required="" lay-verify="required"
-                           autocomplete="off" class="layui-input" value="@string.Format("{0}",Model==null?"":Model.CORPORATION)">
+                    <input type="text" id="LOGINNAME" name="LOGINNAME" required="" lay-verify="required"
+                           autocomplete="off" class="layui-input" value="@string.Format("{0}",Model==null?"":Model.LOGINNAME)">
                 </div>
                 <div class="layui-form-mid layui-word-aux">
-                    <span class="x-red">*</span>公司法人不能为空
+                    <span class="x-red">*</span>登录名不能为空
                 </div>
             </div>
             <div class="layui-form-item">
                 <label for="L_email" class="layui-form-label">
-                    <span class="x-red">*</span>手机
+                    <span class="x-red">*</span>密码
                 </label>
                 <div class="layui-input-inline">
-                    <input type="text" id="MOBILEPHONE" name="MOBILEPHONE" required="" lay-verify="phone"
-                           autocomplete="off" class="layui-input" value="@string.Format("{0}",Model==null?"":Model.MOBILEPHONE)">
+                    <input type="password" id="USERPWD" name="USERPWD" required="" lay-verify="required"
+                           autocomplete="off" class="layui-input" value="@string.Format("{0}",Model==null?"":Model.USERPWD)">
                 </div>
                 <div class="layui-form-mid layui-word-aux">
-                    <span class="x-red">*</span>手机不能为空
+                    <span class="x-red">*</span>密码不能为空
                 </div>
             </div>
             <div class="layui-form-item">
                 <label for="L_pass" class="layui-form-label">
-                    <span class="x-red">*</span>保护时间
+                    <span class="x-red">*</span>创建时间
                 </label>
                 <div class="layui-input-inline">
                     <input type="text" id="EDT" name="EDT" required="" lay-verify="required"
@@ -117,7 +117,7 @@
                     //请求的媒体类型
                     contentType: "application/json",
                     //请求地址
-                    url: "/Erm/ErmSubmit",
+                    url: "/Erm/UserSubmit",
                     //数据，json字符串
                     data: JSON.stringify(data.field),
                     //请求成功
@@ -137,8 +137,8 @@
 
                             //关闭当前frame
                             parent.layer.close(index);
-                            parent.location.href = "/Erm/ErmInfo";
-                        }                   
+                            parent.location.href = "/Erm/ErmUsers";
+                        }
                     },
                     //请求失败，包含具体的错误信息
                     error: function (e) {

@@ -76,10 +76,13 @@
                     <li class="layui-nav-item">
                         <a class="javascript:;" href="javascript:;"> <i class="layui-icon" style="top: 3px;">&#xe613;</i><cite>管理员管理</cite> </a>
                         <dl class="layui-nav-child">
-                            <dd class=""> <a href="javascript:;" _href="/Erm/ErmUsers"> <cite>用户管理</cite> </a> </dd>
+                            @if (Model.USERNAME == "管理员")
+                            {
+                                <dd class=""> <a href="javascript:;" _href="/Erm/ErmUsers"> <cite>用户管理</cite> </a> </dd>
+                            }
                             <dd class=""> <a href="javascript:;" _href="/Erm/ErmInfo"> <cite>档案管理</cite> </a> </dd>
                         </dl>
-                    </li>                    
+                    </li>
                 </ul>
             </div>
         </div>
@@ -104,81 +107,81 @@
     <script src="../js/x-layui.js" charset="utf-8"></script>
 
     <script>
-    //$(".daohang").click(function () {
-    //    var table = $(this).attr("ids");
-    //    var ids = $(".show_list").attr("id");
-    //    $("#" + ids + "").addClass("hide_lits");
-    //    $("#" + ids + "").removeClass("show_list");
-    //    $("" + table + "").removeClass("hide_lits");
-    //    $("" + table + "").addClass("show_list");
-    //})
+        //$(".daohang").click(function () {
+        //    var table = $(this).attr("ids");
+        //    var ids = $(".show_list").attr("id");
+        //    $("#" + ids + "").addClass("hide_lits");
+        //    $("#" + ids + "").removeClass("show_list");
+        //    $("" + table + "").removeClass("hide_lits");
+        //    $("" + table + "").addClass("show_list");
+        //})
 
 
     </script>
     <script>
-    layui.use(['laydate', 'element', 'laypage', 'layer'], function () {
-        $ = layui.jquery;//jquery
-        laydate = layui.laydate;//日期插件
-        lement = layui.element();//面包导航
-        laypage = layui.laypage;//分页
-        layer = layui.layer;//弹出层
-        //以上模块根据需要引入
+        layui.use(['laydate', 'element', 'laypage', 'layer'], function () {
+            $ = layui.jquery;//jquery
+            laydate = layui.laydate;//日期插件
+            lement = layui.element();//面包导航
+            laypage = layui.laypage;//分页
+            layer = layui.layer;//弹出层
+            //以上模块根据需要引入
 
-    });
+        });
 
-    function logout() {
+        function logout() {
 
-        $.ajax({
-            type: "post",
-            url: "",
-            data: { e: 1 },
-            dataType: "json",
-            success: function (data) {
-                if (data.status == 1) {
-                    layer.msg(data.info, { icon: 1, time: 1000 });
-                    setTimeout("window.location.href='{:url('Login/login')}'", 2000); return false;
-                    return false;
-                } else {
-                    layer.msg(data.info, { icon: 5, time: 2000 }); return false;
+            $.ajax({
+                type: "post",
+                url: "",
+                data: { e: 1 },
+                dataType: "json",
+                success: function (data) {
+                    if (data.status == 1) {
+                        layer.msg(data.info, { icon: 1, time: 1000 });
+                        setTimeout("window.location.href='{:url('Login/login')}'", 2000); return false;
+                        return false;
+                    } else {
+                        layer.msg(data.info, { icon: 5, time: 2000 }); return false;
+                    }
                 }
-            }
 
-        })
-        return false;
-    }
+            })
+            return false;
+        }
 
-    function member_show(title, url, id, w, h) {
-        x_admin_show(title, url, w, h);
-    }
+        function member_show(title, url, id, w, h) {
+            x_admin_show(title, url, w, h);
+        }
     </script>
     <script>
-    //顶部时间
-    function getTime() {
-        var myDate = new Date();
-        var myYear = myDate.getFullYear(); //获取完整的年份(4位,1970-????)
-        var myMonth = myDate.getMonth() + 1; //获取当前月份(0-11,0代表1月)
-        var myToday = myDate.getDate(); //获取当前日(1-31)
-        var myDay = myDate.getDay(); //获取当前星期X(0-6,0代表星期天)
-        var myHour = myDate.getHours(); //获取当前小时数(0-23)
-        var myMinute = myDate.getMinutes(); //获取当前分钟数(0-59)
-        var mySecond = myDate.getSeconds(); //获取当前秒数(0-59)
-        var week = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
-        var nowTime;
+        //顶部时间
+        function getTime() {
+            var myDate = new Date();
+            var myYear = myDate.getFullYear(); //获取完整的年份(4位,1970-????)
+            var myMonth = myDate.getMonth() + 1; //获取当前月份(0-11,0代表1月)
+            var myToday = myDate.getDate(); //获取当前日(1-31)
+            var myDay = myDate.getDay(); //获取当前星期X(0-6,0代表星期天)
+            var myHour = myDate.getHours(); //获取当前小时数(0-23)
+            var myMinute = myDate.getMinutes(); //获取当前分钟数(0-59)
+            var mySecond = myDate.getSeconds(); //获取当前秒数(0-59)
+            var week = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+            var nowTime;
 
-        nowTime = myYear + '-' + fillZero(myMonth) + '-' + fillZero(myToday) + '&nbsp;&nbsp;' + fillZero(myHour) + ':' + fillZero(myMinute) + ':' + fillZero(mySecond) + '&nbsp;&nbsp;' + week[myDay] + '&nbsp;&nbsp;';
-        //console.log(nowTime);
-        $('#time').html(nowTime);
-    };
-    function fillZero(str) {
-        var realNum;
-        if (str < 10) {
-            realNum = '0' + str;
-        } else {
-            realNum = str;
+            nowTime = myYear + '-' + fillZero(myMonth) + '-' + fillZero(myToday) + '&nbsp;&nbsp;' + fillZero(myHour) + ':' + fillZero(myMinute) + ':' + fillZero(mySecond) + '&nbsp;&nbsp;' + week[myDay] + '&nbsp;&nbsp;';
+            //console.log(nowTime);
+            $('#time').html(nowTime);
+        };
+        function fillZero(str) {
+            var realNum;
+            if (str < 10) {
+                realNum = '0' + str;
+            } else {
+                realNum = str;
+            }
+            return realNum;
         }
-        return realNum;
-    }
-    setInterval(getTime, 1000);
+        setInterval(getTime, 1000);
     </script>
 </body>
 </html>

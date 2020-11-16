@@ -65,3 +65,4 @@ F:\Work\Erm\ErmProject\ErmMvc\obj\Release\ErmMvc.csproj.CoreCompileInputs.cache
 F:\Work\Erm\ErmProject\ErmMvc\obj\Release\ErmMvc.csproj.CopyComplete
 F:\Work\Erm\ErmProject\ErmMvc\obj\Release\ErmMvc.dll
 F:\Work\Erm\ErmProject\ErmMvc\obj\Release\ErmMvc.pdb
+F:\Work\Erm\ErmProject\ErmMvc\obj\Release\ErmMvc.csprojAssemblyReference.cache
